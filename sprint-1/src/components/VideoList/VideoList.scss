@@ -24,6 +24,11 @@ section {
     margin-left: 3.125%;
     margin-right: 3.125%;
   }
+  @include desktop {
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-top: 40px;
+  }
   h4 {
     font-family: 'AvenirNextLTPro-Demi';
     color: $color-text-black;
@@ -39,6 +44,7 @@ section {
   display: flex;
   flex-direction: row;
   margin-bottom: 18px;
+  align-items: center;
   
 }
 

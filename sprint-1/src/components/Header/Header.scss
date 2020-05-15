@@ -27,6 +27,9 @@ html {
         justify-content: space-between;
         padding-bottom: 3px;
     }
+    @include desktop {
+        padding: 0 4.5%;
+    }
 }
 
 .header__logo {
@@ -36,6 +39,9 @@ html {
     @include tablet {
         height: 26px;
         padding: 0px;
+    }
+    @include desktop {
+        
     }
 }
 
@@ -48,11 +54,7 @@ html {
         flex-direction: row;
         justify-content: flex-end;
         width: 65%;
-        
-      
-
     }
-    
 }
 
 .header__nav-search {
@@ -66,11 +68,16 @@ html {
     padding-left: 20px;
     font-family: 'AvenirNextLTPro-Regular';
     color:#323232;
+    opacity: 0.9;
     font-size: 14px;
     letter-spacing: 0.5px;
     @include tablet {
         width: 50%;
         margin-right: 24px;
+    }
+    @include desktop {
+        width: 37%;
+        margin-right: 5px;
     }
     span {
         margin-left: 10px;
@@ -89,6 +96,10 @@ html {
         width: 38%;
         justify-content: flex-start;
     }
+    @include desktop {
+        width: 28%;
+        justify-content: flex-end;
+    }
 }
 
 .header__nav-side--upload {
@@ -105,6 +116,9 @@ html {
     @include tablet {
         width: 65%;
         margin-right: 24px;
+    }
+    @include desktop {
+        width: 55%;
     }
     span {
         margin-left: 10px;

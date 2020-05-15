@@ -33,7 +33,7 @@ const VideoDetail = props => {
               <form className="conversation-content">
                   <label htmlFor="comment-input">JOIN THE CONVERSATION</label>
                   <div className="conversation-content__boxes">
-                  <textarea id="comment-input" rows="5" cols="20" placeholder="That was easily the most spectacular BMX moment ever." name="inputValue"></textarea> 
+                  <textarea id="comment-input" rows="5" cols="20" placeholder="Write comment here" name="inputValue"></textarea> 
                   <button type="submit" id="submit">COMMENT</button>
                   </div>
               </form>

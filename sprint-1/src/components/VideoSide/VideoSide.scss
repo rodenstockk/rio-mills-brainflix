@@ -24,31 +24,37 @@ html {
 .sidevideo-content {
   margin-left: 16px;
   width: 152px;
+  display: flex;
+  flex-direction: column;
+  height: 65px;
   @include tablet {
   width: 202px;
+  height: 70px;
   }
   &__title {
     font-size: 14px;
     font-family: 'AvenirNextLTPro-Demi';
     color: $color-text-black;
     margin-top: 2%;
-    margin-bottom: 8%;
     line-height: 19px;
-    height: 35px;
     width: 100%;
     overflow: hidden;
     text-overflow: ellipsis; 
     @include tablet {
       font-size: 16px;
       line-height: 21px;
-      
+      margin-top: 1%;
     }
   }
   &__channel {
     font-size: 13px;
     opacity: 0.8;
+    margin-top: 7%;
     letter-spacing: 0.3px;
     font-family: 'AvenirNextLTPro-Regular';
+    @include tablet {
+      margin-top: 3%;
+    }
   }
 
 }

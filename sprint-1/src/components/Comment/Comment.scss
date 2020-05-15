@@ -17,12 +17,7 @@ html {
     display: flex;
     flex-direction: column;
     @include tablet {
-      width: 95%;
       justify-content: flex-start;
-    }
-    @include desktop {
-      width: 49%;
-      margin: auto;
     }
   }
   
@@ -56,11 +51,8 @@ html {
     padding-bottom: 16px;
     @include tablet {
       margin-left: 3%;
-      width: 91%;
+      width: 85%;
       padding-bottom: 19px;
-    }
-    @include desktop {
-      padding-bottom: 24px;
     }
   }
   

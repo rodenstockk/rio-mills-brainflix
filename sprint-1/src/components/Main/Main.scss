@@ -16,4 +16,8 @@ html {
 .belowVideo {
     display: flex;
     flex-direction: column;
+    @include desktop {
+      flex-direction: row;
+      padding: 0 4.5%;
+    }
 }

@@ -17,17 +17,29 @@ html {
   height: 183px;
   position: relative;
   border: none;
+  display: flex;
+  justify-content: center;
+  background-color: black;
   @include tablet {
     height: 400px;
+  }
+  @include desktop {
+    height: 540px;
   }
 }
 
 video {
   width: 100%;
   height: 183px;
-  background-color: black;
+
+  object-fit: cover;
   @include tablet {
     height: 400px;
+    width: 700px;
+  }
+  @include desktop {
+    width: 944px;
+    height: 540px;
   }
 }
 
@@ -48,8 +60,15 @@ video {
   height: 22.5%;
   padding-bottom: 8px;
   @include tablet {
-    height: 12%;
+    height: 12.5%;
     width: 700px;
+    padding-bottom: 16px;
+    padding-right: 8px;
+    padding-left: 8px;
+  }
+  @include desktop {
+    height: 9.5%;
+    width: 928px;
     padding-bottom: 16px;
   }
 }
@@ -66,6 +85,9 @@ video {
   @include tablet {
     margin-left: 0px;
   }
+  @include desktop {
+    width: 55px;
+  }
 }
 
 .videoProcess {
@@ -78,13 +100,19 @@ video {
   justify-content: space-evenly;
   padding: 2px 2px;
   @include tablet {
-    width: 77%;
+    width: 75%;
+  }
+  @include desktop {
+    width: 80%;
   }
   #progressbar {
       width: 80%;
       height: 0px;
       border: 2px solid black;
       border-radius: 5px;
+      @include desktop {
+        width: 86%;
+      }
   }
   span {
       display: none;
@@ -111,6 +139,10 @@ video {
   margin-right: 16px;
   @include tablet {
     margin-right: 0px;
+    width: 85px;
+  }
+  @include desktop {
+    width: 90px;
   }
 }
 
