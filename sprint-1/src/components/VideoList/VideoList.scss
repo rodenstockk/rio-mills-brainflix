@@ -1,0 +1,45 @@
+@import '../../style/fonts';
+@import '../../style/mixins';
+@import '../../style/variables';
+
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  -webkit-box-sizing: inherit;
+  box-sizing: inherit;
+}
+
+section {
+  margin-top: 36px;
+  margin-left: 5%;
+  margin-right: 5%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  @include tablet {
+    margin-top: 42px;
+    margin-left: 3.125%;
+    margin-right: 3.125%;
+  }
+  h4 {
+    font-family: 'AvenirNextLTPro-Demi';
+    color: $color-text-black;
+    font-size: 12px;
+    font-weight: 500;
+    opacity: 0.4;
+    margin-bottom: 34px;
+    margin-top: 0px;
+  }
+}
+
+.sidevideo {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 18px;
+  
+}
+
+

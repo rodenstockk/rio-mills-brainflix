@@ -1,0 +1,19 @@
+@import '../../style/fonts';
+@import '../../style/mixins';
+@import '../../style/variables';
+
+html {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+  }
+  
+  *, *:before, *:after {
+    -webkit-box-sizing: inherit;
+    box-sizing: inherit;
+  }
+  
+
+.belowVideo {
+    display: flex;
+    flex-direction: column;
+}

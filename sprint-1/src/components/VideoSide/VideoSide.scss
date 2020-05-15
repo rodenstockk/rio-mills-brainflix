@@ -1,0 +1,59 @@
+@import '../../style/fonts';
+@import '../../style/mixins';
+@import '../../style/variables';
+
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  -webkit-box-sizing: inherit;
+  box-sizing: inherit;
+}
+
+.sidevideo-image {
+  img {
+    width: 120px;
+    height: 70px;
+    object-fit: cover;
+    border-radius: 5px;
+  }
+}
+
+.sidevideo-content {
+  margin-left: 16px;
+  width: 152px;
+  @include tablet {
+  width: 202px;
+  }
+  &__title {
+    font-size: 14px;
+    font-family: 'AvenirNextLTPro-Demi';
+    color: $color-text-black;
+    margin-top: 2%;
+    margin-bottom: 8%;
+    line-height: 19px;
+    height: 35px;
+    width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis; 
+    @include tablet {
+      font-size: 16px;
+      line-height: 21px;
+      
+    }
+  }
+  &__channel {
+    font-size: 13px;
+    opacity: 0.8;
+    letter-spacing: 0.3px;
+    font-family: 'AvenirNextLTPro-Regular';
+  }
+
+}
+
+
+
+
+

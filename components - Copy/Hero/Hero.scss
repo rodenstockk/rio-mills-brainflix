@@ -1,0 +1,89 @@
+html {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+}
+  
+*, *:before, *:after {
+    -webkit-box-sizing: inherit;
+    box-sizing: inherit;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+.hero {
+    width: 100%;
+    height: 183px;
+    position: relative;
+    border: none;
+}
+
+video {
+    width: 100%;
+    height: 183px;
+    background-color: black;
+}
+
+.controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+
+    bottom: 0;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+
+    width: 320px;
+    flex-wrap: wrap;
+    height: 22.5%;
+    padding-bottom: 8px;
+}
+
+#play {
+    border-radius: 5px;
+    background-color: rgba(0, 0, 0, 0.5);
+    height: 100%;
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    padding: 7px 5px;
+    margin-left: 16px;
+}
+
+.videoProcess {
+    border-radius: 5px;
+    background-color: rgba(0, 0, 0, 0.5);
+    height: 100%;
+    width:45%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 2px 2px;
+    #progressbar {
+        width: 80%;
+        height: 0px;
+        border: 2px solid black;
+        border-radius: 5px;
+    }
+    span {
+        display: none;
+    }
+}
+
+#side {
+    border-radius: 5px;
+    background-color: rgba(0, 0, 0, 0.5);
+    height: 100%;
+    width: 80px;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 3px 2px;
+    margin-right: 16px;
+}
+

@@ -1,0 +1,266 @@
+@import '../../style/fonts';
+@import '../../style/mixins';
+@import '../../style/variables';
+
+section {
+  padding: 0 5%;
+  margin-top: 32px;
+  margin-bottom: 40px;
+  display: flex;
+  flex-direction: column;
+  @include tablet {
+    padding: 0 3.125%;
+  }
+  @include desktop {
+    padding: 0 5%;
+  }
+  h1 {
+    margin-bottom: 20px;
+    @include desktop {
+      margin-bottom: 32px;
+    }
+  }
+  .conversation {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-bottom: 32px;
+    border-bottom: 1.5px solid $color-text-gray;
+    @include tablet {
+      margin: 0 13.8%; 
+      padding-bottom: 24px;
+      width: 72.2%;
+    }
+    @include desktop {
+      width: 49%;
+      margin: auto;
+      justify-content: center;
+      padding-bottom: 24px;
+    }
+  }
+}
+
+.conversation-content {
+  display: flex;
+  flex-direction: column;
+  width: 77%;
+  @include tablet {
+    padding-left: 4%;
+    width: 95%;
+  }
+  @include desktop {
+    padding-left: 4.5%;
+  }
+}
+
+.conversation-image {
+  display: flex;
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  margin-top: 35px;
+  @include desktop {
+    margin-top: 47.2px;
+  }
+}
+
+label {
+  font-family: 'AvenirNextLTPro-Demi';
+  color: $color-text-black;
+  font-size: 12px;
+  padding-top: 20px;
+  padding-bottom: 3px;
+  font-weight: 500;
+  opacity: 0.4;
+  @include tablet {
+    font-size: 13px;
+  }
+  @include desktop{
+    padding-top: 24px;
+    padding-bottom: 8px;
+  }
+}
+
+
+#name {
+  height: 47px;
+  border: 1.9px solid $color-background-black;
+  border-radius: 5px;
+  padding: 5% 6%;
+  @include tablet {
+    padding: 5% 3%;
+  }
+  @include desktop {
+    height: 48px;
+  }
+}
+
+#name:focus
+{
+  outline:none;
+} 
+
+#comment-input {
+  border: 1px solid $color-text-gray;
+  border-radius: 5px;
+  height: 95px;
+  background-color: $color-background-lighestgrey;
+  padding-top: 15px;
+  padding-left: 6%;
+  @include tablet {
+    padding-left: 3%;
+  }
+}
+
+#comment-input:focus
+{
+  outline:none;
+} 
+
+#submit {
+  margin-top: 15px;
+  width: 100%;
+  height: 47px;
+  border: 1.9px solid $color-background-black;
+  border-radius: 5px;
+  text-align: center;
+  background-color: $color-background-black;
+  color: white;
+  letter-spacing: 1px;
+  @include tablet {
+    margin-top: 24px;
+    width: 35%;
+    margin-left: 65%;
+    font-size: 13px;
+  }
+  @include desktop {
+    margin-top: 24px;
+  }
+}
+
+#submit:focus
+{
+  outline:none;
+} 
+
+::placeholder {
+  color: $color-text-black;
+  font-size: 13px;
+  font-family: 'AvenirNextLTPro-Regular';
+  font-weight: 500;
+  @include tablet {
+    font-size: 14px;
+  }
+}
+
+textarea { 
+  resize: none; 
+}
+
+
+
+
+
+
+
+#comments {
+    display: flex;
+    flex-direction: column;
+    @include tablet {
+      margin: 0 13.8%; 
+      width: 72.2%;
+      justify-content: flex-start;
+    }
+    @include desktop {
+      width: 49%;
+      margin: auto;
+    }
+  }
+  
+  .comments {
+    border-bottom: 1.5px solid $color-text-gray;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    @include tablet {
+      justify-content: flex-start;
+    }
+  }
+  
+  .comments-image {
+    margin-top: 24px;
+    display: flex;
+    border-radius: 50%;
+    width: 42px;
+    height: 42px;
+    background-color: $color-text-gray;
+    background-position: 30% 50%;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  
+  .comments-content {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    padding-top: 28px;
+    padding-bottom: 24px;
+    @include tablet {
+      margin-left: 3%;
+      width: 91%;
+      padding-bottom: 19px;
+    }
+    @include desktop {
+      padding-bottom: 24px;
+    }
+  }
+  
+  .comments-content__top {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 16px;
+    @include tablet {
+      margin-bottom: 9px;
+    }
+    &--name {
+      font-family: 'AvenirNextLTPro-Demi';
+      font-size: 14px;
+      letter-spacing: 0.3px;
+      @include tablet {
+        font-size: 16px;
+      }
+    }
+    &--date {
+      font-size: 14px;
+      letter-spacing: 0.5px;
+      color: $color-text-darkgray;
+      font-family: 'AvenirNextLTPro-Thin';
+      font-weight: 600;
+    }
+  }
+  
+  .comments-content__btm {
+    display: flex;
+    letter-spacing: 0.4px;
+    line-height: 20px;
+    opacity: 0.9;
+    @include tablet {
+      line-height: 19px;
+      letter-spacing: 0.45px;
+    }
+  }
+
+
+
+
+  .sidevideo-image {
+    height: 50px;
+    width: 50px;
+  }
+
+  img {
+    max-width:100%;
+    max-height:100%;
+  }
