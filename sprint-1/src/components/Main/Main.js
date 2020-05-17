@@ -23,18 +23,18 @@ class Main extends React.Component {
       return (
         <>
         <VideoPlaying
-          poster={this.state.videoData[0].image}
-          videoSample={this.state.videoData[0].video}
+          poster={this.state.onVideo.image}
+          videoSample={this.state.onVideo.video}
         />
         <div className="belowVideo">
         <VideoDetail 
-          comments={this.state.videoData[0].comments}
-          title={this.state.videoData[0].title}
-          channel={this.state.videoData[0].channel}
-          description={this.state.videoData[0].description}
-          views={this.state.videoData[0].views}
-          likes={this.state.videoData[0].likes}
-          timestamp={this.state.videoData[0].timestamp}
+          comments={this.state.onVideo.comments}
+          title={this.state.onVideo.title}
+          channel={this.state.onVideo.channel}
+          description={this.state.onVideo.description}
+          views={this.state.onVideo.views}
+          likes={this.state.onVideo.likes}
+          timestamp={this.state.onVideo.timestamp}
         />
       
         <VideoList 
