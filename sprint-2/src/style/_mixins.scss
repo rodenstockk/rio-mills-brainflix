@@ -1,0 +1,54 @@
+@import 'variables';
+
+@mixin tablet {
+  @media screen and (min-width: $tablet-breakpoint) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media screen and (min-width: $desktop-breakpoint) {
+    @content;
+  }
+}
+
+@mixin flex-colum {
+  display: flex;
+  flex-direction: column;
+};
+
+@mixin font-14px-20h {
+  font-size: 14px;
+  line-height: 20px;
+}
+
+@mixin font-14px-22h {
+  font-size: 14px;
+  line-height: 22px;
+}
+
+@mixin font-12px-18h {
+  font-size: 12px; 
+  line-height: 18px;
+}
+
+@mixin photo-size-phone {
+  padding-top: 32px;
+  padding-bottom: 24px;
+  padding-right: 5%;
+  padding-left: 5%;
+}
+
+@mixin photo-size-tablet {
+  padding-top: 32px;
+  padding-bottom: 16px;
+  padding-right: 3.125%;
+  padding-left: 3.125%;
+}
+
+@mixin photo-size-desktop {
+  padding-top: 48px;
+  padding-bottom: 16px;
+  padding-right: 5%;
+  padding-left: 5%;
+}
