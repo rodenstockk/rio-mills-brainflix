@@ -53,17 +53,13 @@ class Main extends React.Component {
     
 
     componentDidUpdate() {
+      let dynamicURL = this.props.match.params.id
       console.log(this.props)
-      axios
-      .get(`${API_URL}/videos/${this.props.match.params.id}${API_KEY}`)
+      if (typeof this.props.match.params.id === "undefined") {
+        dynamicURL = '1af0jruup5gu'}
       
-      // .then(response => {
-      //   console.log(response)
-      //   this.setState({
-      //     onVideo: response.data
-      //   });
-      // })
-
+      axios
+      .get(`${API_URL}/videos/${dynamicURL}${API_KEY}`)
           .then(response => {
             console.log(response)
               if (this.state.onVideo.id !== response.data.id) {
@@ -72,22 +68,6 @@ class Main extends React.Component {
               }   
           })      
   }
-
-  // componentDidUpdate() {
-  //   axios
-  //     .get(`${API_URL}/videos/${MAIN_URL}${API_KEY}`)
-  //     .then(response => {
-  //       // console.log(response)
-  //       this.setState({
-  //         onVideo: response.data
-  //       });
-  //     })
-  // }
-
-
-  // componentWillUnmount() {
-    
-  // }
 
 
     
@@ -101,14 +81,15 @@ class Main extends React.Component {
           videoSample={this.state.onVideo.video}
         />
         <div className="belowVideo">
-        <VideoDetail 
-          comments={this.state.onVideo.comments}
-          title={this.state.onVideo.title}
-          channel={this.state.onVideo.channel}
-          description={this.state.onVideo.description}
-          views={this.state.onVideo.views}
-          likes={this.state.onVideo.likes}
-          timestamp={this.state.onVideo.timestamp}
+        <VideoDetail
+          onVideoDetail={this.state.onVideo} 
+          // comments={this.state.onVideo.comments}
+          // title={this.state.onVideo.title}
+          // channel={this.state.onVideo.channel}
+          // description={this.state.onVideo.description}
+          // views={this.state.onVideo.views}
+          // likes={this.state.onVideo.likes}
+          // timestamp={this.state.onVideo.timestamp}
         />
       
         <VideoList 

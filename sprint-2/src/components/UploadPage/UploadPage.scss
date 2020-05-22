@@ -23,8 +23,10 @@ html {
     flex-direction: column;
     justify-content: center;
     @include tablet {
+      padding-top: 48px;
       padding-left: 3.125%;
       padding-right: 3.125%;
+      margin-bottom: 160px;
     }
     h1 {
       margin-top: 0px;
@@ -35,6 +37,7 @@ html {
       color: $color-text-black;
       @include tablet {
         font-size: 36px;
+        margin-bottom: 32px;
       }
       @include desktop {
         letter-spacing: 1px;
@@ -42,15 +45,36 @@ html {
     }
 }
 
+.uploadform__top {
+  border-top: 1.5px solid $color-text-gray;
+  border-bottom: 1.5px solid $color-text-gray;
+  @include desktop {
+    display: flex;
+    flex-direction: row;
+  }
+}
+
+
+
 .uploadform__top--thumbnail {
     display: flex;
     flex-direction: column;
     margin-bottom: 8px;
+    @include tablet {
+      margin-bottom: 0px;
+    }
+    @include desktop {
+      margin-right: 24px;
+    }
     img {
         width: 288px;
         height: 153px;
         object-fit: cover;
         border-radius: 5px;
+        @include tablet {
+          width: 344px;
+          height: 183px;
+        }
     } 
   }
 
@@ -64,6 +88,9 @@ html {
     width: 100%;
     display: flex;
     flex-direction: column;
+    @include desktop {
+      margin-bottom: 16px;
+    }
 }
 
 .uploadform__top--left-description {
@@ -86,7 +113,7 @@ label {
   opacity: 0.4;
   @include tablet {
     font-size: 12px;
-    padding-top: 24px;
+    padding-top: 40px;
   }
   @include desktop{
     padding-top: 24px;
@@ -105,11 +132,7 @@ label {
     padding-right: 6%;
     @include tablet {
       padding-left: 3%;
-      height: 50px;
-      width: 70%;
-    }
-    @include desktop {
-      width: 65%;
+      margin-bottom: -16px;
     }
   }
 
@@ -123,11 +146,10 @@ label {
     padding-right: 6%;
     @include tablet {
       padding-left: 3%;
-      height: 50px;
-      width: 70%;
+      margin-bottom: 40px;
     }
     @include desktop {
-      width: 65%;
+      height: 90px;
     }
   }
 
@@ -149,6 +171,12 @@ label {
 
   .uploadform__btm {
     margin-top: 32px;
+    @include tablet {
+      margin-top: 40px;
+      display: flex;
+      flex-direction: row-reverse;
+      
+    }
   }
 
   #publish {
@@ -167,7 +195,6 @@ label {
       height: 50px;
       margin-top: 0px;
       margin-left: 16px;
-      margin-right: 40px;
       width: 160px;
     }
   }
@@ -179,16 +206,13 @@ label {
     width: 100%;
     height: 48px;
     border: none;
-    // border-radius: 5px;
     text-align: center;
     background-color: white;
     color: #0095FF;
     letter-spacing: 1px;
     @include tablet {
       height: 50px;
+      width: 125px;
       margin-top: 0px;
-      margin-left: 16px;
-      margin-right: 40px;
-      width: 160px;
     }
   }

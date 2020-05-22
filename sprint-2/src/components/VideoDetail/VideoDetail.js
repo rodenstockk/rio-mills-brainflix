@@ -39,22 +39,22 @@ const VideoDetail = props => {
 
         <main>
           <div className="heading">
-            <h1>{props.title}</h1>
+            <h1>{props.onVideoDetail.title}</h1>
             <div className="bottom">
               <div className="bottom__left">
-                <span className="bottom__left--by">{props.channel}</span>
-                <span className="bottom__left--date">{timeConverter(props.timestamp)}</span>
+                <span className="bottom__left--by">By {props.onVideoDetail.channel}</span>
+                <span className="bottom__left--date">{timeConverter(props.onVideoDetail.timestamp)}</span>
               </div>
               <div className="bottom__right">
-                <span className="bottom__right--view"><img src={viewIcon} alt="viewIcon"/>{props.views}</span>
-                <span className="bottom__right--like"><img src={likeIcon} alt="likeIcon"/>{props.likes}</span>
+                <span className="bottom__right--view"><img src={viewIcon} alt="viewIcon"/>{props.onVideoDetail.views}</span>
+                <span className="bottom__right--like"><img src={likeIcon} alt="likeIcon"/>{props.onVideoDetail.likes}</span>
               </div>
             </div> 
           </div>
-          <p className="description">{props.description}</p>
+          <p className="description">{props.onVideoDetail.description}</p>
           
 
-          <h3>{props.comments.length} Comments</h3>
+          <h3>{props.onVideoDetail.comments.length} Comments</h3>
           <div className="conversation">
               <div className="conversation-image"></div>
               <form className="conversation-content">
@@ -66,7 +66,7 @@ const VideoDetail = props => {
               </form>
           </div>
           <div id = 'comments'>{
-            props.comments.map((commentArray, index)=>
+            props.onVideoDetail.comments.map((commentArray, index)=>
             <Comment 
               key={index}
               name={commentArray.name}
