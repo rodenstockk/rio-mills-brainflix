@@ -11,7 +11,7 @@ const VideoList = props => {
         
         <div id="sidevideo" >{
             props.nextVideos.map((sideArray, index) =>
-                <Link to={`/${sideArray.id}`} className="sidevideo__link"> 
+                <Link to={`/${sideArray.id}`} key={index} className="sidevideo__link"> 
                 <VideoSide 
                     key={index}
                     title={sideArray.title}

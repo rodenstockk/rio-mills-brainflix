@@ -11,7 +11,7 @@ import {Link} from 'react-router-dom';
 const Header = () => {
     return (
       <header className="header">
-        <Link to="/" className="header__link"><img src={logoBrainFlix} className="header__logo" alt="Logo"/></Link>
+        <Link to="/1af0jruup5gu" className="header__link"><img src={logoBrainFlix} className="header__logo" alt="Logo"/></Link>
         <nav className="header__nav">
             <div className="header__nav-search">
               <img src={imgNavSearch} alt="imgNavSearch"/>

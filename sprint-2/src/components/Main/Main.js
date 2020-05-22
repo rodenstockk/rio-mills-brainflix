@@ -23,8 +23,8 @@ class Main extends React.Component {
       onVideo: {
         comments: []
       },
-      videoList: [],
       
+      videoList: [],
     }
 
 
@@ -68,12 +68,26 @@ class Main extends React.Component {
             console.log(response)
               if (this.state.onVideo.id !== response.data.id) {
                   this.setState({
-                    onVideo: response.data,
-                  });
-              }
-          });
+                    onVideo: response.data,});
+              }   
+          })      
   }
 
+  // componentDidUpdate() {
+  //   axios
+  //     .get(`${API_URL}/videos/${MAIN_URL}${API_KEY}`)
+  //     .then(response => {
+  //       // console.log(response)
+  //       this.setState({
+  //         onVideo: response.data
+  //       });
+  //     })
+  // }
+
+
+  // componentWillUnmount() {
+    
+  // }
 
 
     

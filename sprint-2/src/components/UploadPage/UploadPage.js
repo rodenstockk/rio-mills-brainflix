@@ -31,8 +31,8 @@ const UploadPage = () => {
 
                 <div className="uploadform__btm">
                     
-                    <button type="submit" id="submit">CANCEL</button>
-                    <button type="submit" id="submit">PUBLISH</button>
+                    <button type="submit" id="publish">PUBLISH</button>
+                    <button type="cancel" id="cancel">CANCEL</button>
                 
                 </div>
 
