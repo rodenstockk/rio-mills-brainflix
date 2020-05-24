@@ -1,14 +1,9 @@
 import React from 'react';
-// import videoListsData from '../../videoListsData';
-//Merged two objects into one -> All in videoDetailData
-// import videoDetailData from '../../videoDetailData';
 import './Main.scss'
 import axios from 'axios';
-
 import VideoPlaying from '../VideoPlaying/VideoPlaying';
 import VideoDetail from '../VideoDetail/VideoDetail';
 import VideoList from '../VideoList/VideoList';
-
 
 // https://project-2-api.herokuapp.com/videos?api_key=b5c0dbae-f440-4369-9169-8baa9b60cfb8
 
@@ -19,22 +14,18 @@ const MAIN_URL = '1af0jruup5gu'
 
 class Main extends React.Component {
     state = {
-      // videoData: videoDetailData,
       onVideo: {
         comments: []
       },
-      
       videoList: [],
     }
 
 
     componentDidMount() {
-      // console.log(this.props)
 
       axios
       .get(`${API_URL}/videos/${MAIN_URL}${API_KEY}`)
       .then(response => {
-        // console.log(response)
         this.setState({
           onVideo: response.data
         });
@@ -43,7 +34,6 @@ class Main extends React.Component {
       axios
         .get(`${API_URL}/videos${API_KEY}`)
         .then(response => {
-          console.log(response)
           this.setState({
             videoList: response.data
           });
@@ -51,7 +41,6 @@ class Main extends React.Component {
     }
     
     
-
     componentDidUpdate() {
       let dynamicURL = this.props.match.params.id
       console.log(this.props)
@@ -69,35 +58,26 @@ class Main extends React.Component {
           })      
   }
 
-
     
     render() {
 
       return (
         <>
-        
         <VideoPlaying
           poster={this.state.onVideo.image}
           videoSample={this.state.onVideo.video}
+          duration={this.state.onVideo.duration}
         />
         <div className="belowVideo">
         <VideoDetail
           onVideoDetail={this.state.onVideo} 
-          // comments={this.state.onVideo.comments}
-          // title={this.state.onVideo.title}
-          // channel={this.state.onVideo.channel}
-          // description={this.state.onVideo.description}
-          // views={this.state.onVideo.views}
-          // likes={this.state.onVideo.likes}
-          // timestamp={this.state.onVideo.timestamp}
         />
-      
         <VideoList 
           nextVideos={this.state.videoList.filter(data => data.id !== this.state.onVideo.id)}
         />
         </div>
         </>
-          )
+        )
     };  
   }
 

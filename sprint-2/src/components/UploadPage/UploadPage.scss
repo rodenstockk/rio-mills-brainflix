@@ -28,6 +28,10 @@ html {
       padding-right: 3.125%;
       margin-bottom: 160px;
     }
+    @include desktop {
+      padding-left: 4.5%;
+      padding-right: 4.5%;
+    } 
     h1 {
       margin-top: 0px;
       margin-bottom: 8px;
@@ -46,8 +50,10 @@ html {
 }
 
 .uploadform__top {
+  @include tablet {
   border-top: 1.5px solid $color-text-gray;
   border-bottom: 1.5px solid $color-text-gray;
+  }
   @include desktop {
     display: flex;
     flex-direction: row;
@@ -216,3 +222,15 @@ label {
       margin-top: 0px;
     }
   }
+
+
+  
+#publish:focus
+{
+  outline:none;
+} 
+
+#cancel:focus
+{
+  outline:none;
+} 

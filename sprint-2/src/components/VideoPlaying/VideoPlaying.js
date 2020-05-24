@@ -20,7 +20,7 @@ const VideoPlaying = props => {
                 <img src={videoPlay} id='play' alt="videoPlay"/>
                 <div className='videoProcess'>
                     <div id='progressbar'></div>
-                    <span>0:00 / 0:42</span>
+                    <span>0:00 / {props.duration}</span>
                 </div>
                 <div id='side'><img src={videoFull} alt="videoFull"/><img src={videoSound} alt="videoSound"/></div>
             </div>
