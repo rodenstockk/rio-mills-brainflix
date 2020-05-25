@@ -5,11 +5,11 @@ import VideoPlaying from '../VideoPlaying/VideoPlaying';
 import VideoDetail from '../VideoDetail/VideoDetail';
 import VideoList from '../VideoList/VideoList';
 
-// https://project-2-api.herokuapp.com/videos?api_key=b5c0dbae-f440-4369-9169-8baa9b60cfb8
 
 const API_URL = 'https://project-2-api.herokuapp.com';
-const API_KEY = '?api_key=1749a3e2-2fcc-49c3-b8c4-9cc4d27a9a88';
+const API_KEY = '?api_key=d1ea437e-93e6-49d6-be6e-d390f6da07b1';
 const MAIN_URL = '1af0jruup5gu'
+
 
 
 class Main extends React.Component {
@@ -20,17 +20,14 @@ class Main extends React.Component {
       videoList: [],
     }
 
-
-    componentDidMount() {
-
+    firstMount = () => {
       axios
       .get(`${API_URL}/videos/${MAIN_URL}${API_KEY}`)
       .then(response => {
         this.setState({
-          onVideo: response.data
+          onVideo: response.data,
         });
       })
-        
       axios
         .get(`${API_URL}/videos${API_KEY}`)
         .then(response => {
@@ -39,9 +36,13 @@ class Main extends React.Component {
           });
         })  
     }
-    
-    
-    componentDidUpdate() {
+
+
+    componentDidMount() {
+      this.firstMount();
+    }
+
+    componentDidUpdate() {      
       let dynamicURL = this.props.match.params.id
       console.log(this.props)
       if (typeof this.props.match.params.id === "undefined") {
@@ -53,12 +54,32 @@ class Main extends React.Component {
             console.log(response)
               if (this.state.onVideo.id !== response.data.id) {
                   this.setState({
-                    onVideo: response.data,});
+                    onVideo: response.data,
+                    });
               }   
-          })      
-  }
+          })  
+    }
 
+
+    commentHandler = (e) => {
+      let dynamicURL = this.props.match.params.id
+      e.preventDefault();
+      let note = e.target.inputValue.value;
+
+      if (typeof dynamicURL === "undefined") {
+        dynamicURL = '1af0jruup5gu'}
+      axios 
+        .post(`${API_URL}/videos/${dynamicURL}/comments${API_KEY}`, {
+          "comment" : e.target.inputValue.value,
+          "name" : "Rio"
+        })
+        .then(() => {
+          this.firstMount();
+        }) 
+        e.target.reset();
+    }
     
+
     render() {
 
       return (
@@ -71,6 +92,7 @@ class Main extends React.Component {
         <div className="belowVideo">
         <VideoDetail
           onVideoDetail={this.state.onVideo} 
+          commentHandler={this.commentHandler}
         />
         <VideoList 
           nextVideos={this.state.videoList.filter(data => data.id !== this.state.onVideo.id)}

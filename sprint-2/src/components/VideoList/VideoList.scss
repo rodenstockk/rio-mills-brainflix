@@ -18,7 +18,7 @@ section {
   margin-right: 5%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   @include tablet {
     margin-top: 42px;
     margin-left: 3.125%;

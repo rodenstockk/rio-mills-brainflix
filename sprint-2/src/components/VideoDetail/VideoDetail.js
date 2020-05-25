@@ -34,6 +34,7 @@ const timeConverter = (timeStampFromApi) => {
 
 const VideoDetail = props => {
 
+      // let {title, channel, timestamp, views, likes, description, comments, commentHandler} = props;
       return (
         <>
 
@@ -57,7 +58,7 @@ const VideoDetail = props => {
           <h3>{props.onVideoDetail.comments.length} Comments</h3>
           <div className="conversation">
               <div className="conversation-image"></div>
-              <form className="conversation-content">
+              <form className="conversation-content" onSubmit={props.commentHandler} >
                   <label htmlFor="comment-input">JOIN THE CONVERSATION</label>
                   <div className="conversation-content__boxes">
                   <textarea id="comment-input" rows="5" cols="20" placeholder="Write comment here" name="inputValue"></textarea> 
@@ -72,8 +73,9 @@ const VideoDetail = props => {
               name={commentArray.name}
               timestamp={commentArray.timestamp}
               comment={commentArray.comment}
+
             />
-            )
+            ).reverse()
           }
           </div>
         </main>
