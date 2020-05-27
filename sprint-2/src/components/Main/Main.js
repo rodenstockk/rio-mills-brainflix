@@ -31,6 +31,7 @@ class Main extends React.Component {
       axios
         .get(`${API_URL}/videos${API_KEY}`)
         .then(response => {
+          console.log(response.data)
           this.setState({
             videoList: response.data
           });
@@ -44,14 +45,14 @@ class Main extends React.Component {
 
     componentDidUpdate() {      
       let dynamicURL = this.props.match.params.id
-      console.log(this.props)
+      // console.log(this.props)
       if (typeof this.props.match.params.id === "undefined") {
         dynamicURL = '1af0jruup5gu'}
       
       axios
       .get(`${API_URL}/videos/${dynamicURL}${API_KEY}`)
           .then(response => {
-            console.log(response)
+            // console.log(response)
               if (this.state.onVideo.id !== response.data.id) {
                   this.setState({
                     onVideo: response.data,

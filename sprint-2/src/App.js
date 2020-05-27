@@ -3,7 +3,7 @@ import Header from './components/Header/Header'
 import Main from './components/Main/Main'
 import UploadPage from '../src/components/UploadPage/UploadPage';
 
-import {Switch, Route, Redirect} from 'react-router-dom';
+import {Switch, Route} from 'react-router-dom';
 
 
 

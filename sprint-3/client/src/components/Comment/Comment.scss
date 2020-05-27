@@ -1,0 +1,102 @@
+@import '../../style/fonts';
+@import '../../style/mixins';
+@import '../../style/variables';
+
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  -webkit-box-sizing: inherit;
+  box-sizing: inherit;
+}
+
+
+#comments {
+    display: flex;
+    flex-direction: column;
+    @include tablet {
+      justify-content: flex-start;
+    }
+  }
+  
+  .comments {
+    border-bottom: 1.5px solid $color-text-gray;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    @include tablet {
+      justify-content: flex-start;
+    }
+  }
+  
+  .comments-image {
+    margin-top: 20px;
+    display: flex;
+    border-radius: 50%;
+    width: 42px;
+    height: 42px;
+    background-color: $color-text-gray;
+    background-position: 30% 50%;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  
+  .comments-content {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    padding-top: 22px;
+    padding-bottom: 16px;
+    @include tablet {
+      margin-left: 3%;
+      width: 85%;
+      padding-bottom: 19px;
+    }
+  }
+  
+  .comments-content__top {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    @include tablet {
+      justify-content: flex-start;
+      align-items: center;
+      margin-bottom: 8px;
+    }
+    &--name {
+      font-family: 'AvenirNextLTPro-Demi';
+      font-size: 14px;
+      letter-spacing: 0.3px;
+      @include tablet {
+        font-size: 16px;
+        margin-right: 10px;
+      }
+    }
+    &--date {
+      font-size: 13px;
+      letter-spacing: 0.5px;
+      color: $color-text-darkgray;
+      font-family: 'AvenirNextLTPro-Thin';
+      font-weight: 600;
+    }
+  }
+  
+  .comments-content__btm {
+    display: flex;
+    letter-spacing: 0.4px;
+    line-height: 19px;
+    opacity: 0.9;
+    font-size: 13px;
+    font-family: 'AvenirNextLTPro-Regular';
+    @include tablet {
+      line-height: 19px;
+      letter-spacing: 0.45px;
+    }
+  }
+
+
+
+
