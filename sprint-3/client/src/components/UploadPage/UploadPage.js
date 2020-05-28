@@ -2,6 +2,7 @@ import React from 'react';
 import './UploadPage.scss';
 import axios from 'axios';
 import UploadForm from '../UploadForm/UploadForm'
+const {v4:uuid4} = require('uuid');
 
 const API_URL = 'http://localhost:8080';
 
@@ -12,7 +13,7 @@ class UploadPage extends React.Component {
         e.preventDefault();
         axios 
           .post(`${API_URL}/videos`, {
-            "id": Date.now(),
+            "id": uuid4(),
             "title": e.target.titleinputValue.value,
             "channel":"Rio Mills",
             "image":"http://localhost:8080/preview.jpg",

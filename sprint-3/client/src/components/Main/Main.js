@@ -73,7 +73,7 @@ class Main extends React.Component {
         .post(`${API_URL}/videos/${dynamicURL}/comments`, {
           "comment" : e.target.inputValue.value,
           "timestamp" : Date.now(),
-          "name" : "Rio"
+          "name" : "Rio Mills"
         })
         .then(() => {
           this.firstMount();
