@@ -42,13 +42,13 @@ const VideoDetail = props => {
           <div className="heading">
             <h1>{props.onVideoDetail.title}</h1>
             <div className="bottom">
-              <div className="bottom__left">
-                <span className="bottom__left--by">By {props.onVideoDetail.channel}</span>
-                <span className="bottom__left--date">{timeConverter(props.onVideoDetail.timestamp)}</span>
+              <div className="bottom__text">
+                <span className="bottom__text-by">By {props.onVideoDetail.channel}</span>
+                <span className="bottom__text-date">{timeConverter(props.onVideoDetail.timestamp)}</span>
               </div>
-              <div className="bottom__right">
-                <span className="bottom__right--view"><img src={viewIcon} alt="viewIcon"/>{props.onVideoDetail.views}</span>
-                <span className="bottom__right--like"><img src={likeIcon} alt="likeIcon"/>{props.onVideoDetail.likes}</span>
+              <div className="bottom__number">
+                <span className="bottom__number-view"><img src={viewIcon} alt="viewIcon"/>{props.onVideoDetail.views}</span>
+                <span className="bottom__number-like"><img src={likeIcon} alt="likeIcon"/>{props.onVideoDetail.likes}</span>
               </div>
             </div> 
           </div>

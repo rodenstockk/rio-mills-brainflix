@@ -56,7 +56,7 @@ html {
     }
   }
   
-  .comments-content__top {
+  .comments-content__intro {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -66,7 +66,7 @@ html {
       align-items: center;
       margin-bottom: 8px;
     }
-    &--name {
+    &-name {
       font-family: 'AvenirNextLTPro-Demi';
       font-size: 14px;
       letter-spacing: 0.3px;
@@ -75,7 +75,7 @@ html {
         margin-right: 10px;
       }
     }
-    &--date {
+    &-date {
       font-size: 13px;
       letter-spacing: 0.5px;
       color: $color-text-darkgray;
@@ -84,7 +84,7 @@ html {
     }
   }
   
-  .comments-content__btm {
+  .comments-content__detail {
     display: flex;
     letter-spacing: 0.4px;
     line-height: 19px;

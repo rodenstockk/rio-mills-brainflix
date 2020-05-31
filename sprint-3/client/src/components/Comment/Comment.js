@@ -36,11 +36,11 @@ class Comment extends React.Component {
         <div className="comments">
             <div className="comments-image"></div>
             <div className="comments-content" >
-                <div className="comments-content__top">
-                    <div className="comments-content__top--name">{name}</div>
-                    <div className="comments-content__top--date">{timeConverter(timestamp)}</div>
+                <div className="comments-content__intro">
+                    <div className="comments-content__intro-name">{name}</div>
+                    <div className="comments-content__intro-date">{timeConverter(timestamp)}</div>
                 </div>
-                <div className="comments-content__btm">{comment}</div>
+                <div className="comments-content__detail">{comment}</div>
             </div>
         </div>
 

@@ -10,19 +10,19 @@ import {Link} from 'react-router-dom';
 
 const Header = () => {
     return (
-      <header className="header">
-        <Link to="/" className="header__link"><img src={logoBrainFlix} className="header__logo" alt="Logo"/></Link>
-        <nav className="header__nav">
-            <div className="header__nav-search">
+      <header>
+        <Link to="/" className="link"><img src={logoBrainFlix} className="logo" alt="Logo"/></Link>
+        <nav className="nav">
+            <div className="nav__search">
               <img src={imgNavSearch} alt="imgNavSearch"/>
               <span>Search</span>
             </div>
-            <div className="header__nav-side">
-              <div className="header__nav-side--upload">
+            <div className="nav__side">
+              <div className="nav__side-upload">
                   <img src={imgNavUpload} alt="imgNavUpload"/>
-                  <span><Link to="/upload" className="header__nav-side--upload-link">UPLOAD</Link></span>
+                  <span><Link to="/upload" className="nav__side-uploadlink">UPLOAD</Link></span>
               </div>
-              <div className="header__nav-side--person"></div>
+              <div className="nav__side-person"></div>
             </div>
         </nav>
       </header>

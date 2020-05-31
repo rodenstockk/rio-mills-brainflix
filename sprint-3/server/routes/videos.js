@@ -194,7 +194,6 @@ router.post('/videos/:id/comments', (req, res) => {
     ? videos.find(onVideo => onVideo.id === req.params.id)
     : videos;
 
-    console.log(req.body.comments)
     currVideo.comments.push(req.body);
     res.json(currVideo.comments)
   });

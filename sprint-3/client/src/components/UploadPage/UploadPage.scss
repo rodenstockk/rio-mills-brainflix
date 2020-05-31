@@ -49,7 +49,7 @@ html {
     }
 }
 
-.uploadform__top {
+.top {
   @include tablet {
   border-top: 1.5px solid $color-text-gray;
   border-bottom: 1.5px solid $color-text-gray;
@@ -62,7 +62,7 @@ html {
 
 
 
-.uploadform__top--thumbnail {
+.top__thumbnail {
     display: flex;
     flex-direction: column;
     margin-bottom: 8px;
@@ -84,13 +84,13 @@ html {
     } 
   }
 
-.uploadform__top--left {
+.top__left {
     display: flex;
     flex-direction: column;
     width: 100%;
 }
 
-.uploadform__top--left-title {
+.top__left-title {
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -99,7 +99,7 @@ html {
     }
 }
 
-.uploadform__top--left-description {
+.top__left-description {
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -175,7 +175,7 @@ label {
   }
   
 
-  .uploadform__btm {
+  .btm {
     margin-top: 32px;
     @include tablet {
       margin-top: 40px;

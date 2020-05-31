@@ -68,15 +68,15 @@ main {
       padding: 0px;
       height: 45px;
     }
-    &__left {
+    &__text {
       margin-bottom: 26px;
-      &--by{
+      &-by{
         font-size: 16px;
         letter-spacing: 0.1px;
         font-family: 'AvenirNextLTPro-Demi';
         margin-right: 8px;
       }
-      &--date{
+      &-date{
         font-size: 14px;
         letter-spacing: 0.6px;
         font-family: 'AvenirNextLTPro-Regular';
@@ -85,7 +85,7 @@ main {
         color: $color-text-black;
       }
     }
-    &__right {
+    &__number {
       font-size: 14px;
       font-family: 'AvenirNextLTPro-Regular';
       color: $color-text-black;
@@ -99,7 +99,7 @@ main {
         margin-bottom: -4px;
         margin-right: 8px;
       }
-      &--view {
+      &-view {
         margin-right: 24px;
         @include desktop {
           margin-right: 30px;

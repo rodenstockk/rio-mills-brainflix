@@ -28,13 +28,18 @@ class Main extends React.Component {
           onVideo: response.data,
         });
       })
+      .catch(err => {
+        console.log(err)
+      })
       axios
         .get(`${API_URL}/videos`)
         .then(response => {
-          console.log(response.data)
           this.setState({
             videoList: response.data
           });
+        })
+        .catch(err => {
+          console.log(err)
         })  
     }
 
@@ -45,19 +50,20 @@ class Main extends React.Component {
 
     componentDidUpdate() {      
       let dynamicURL = this.props.match.params.id
-      // console.log(this.props)
       if (typeof this.props.match.params.id === "undefined") {
         dynamicURL = '1af0jruup5gu'}
       
       axios
       .get(`${API_URL}/videos/${dynamicURL}`)
           .then(response => {
-            // console.log(response)
               if (this.state.onVideo.id !== response.data.id) {
                   this.setState({
                     onVideo: response.data,
                     });
               }   
+          })
+          .catch(err => {
+            console.log(err)
           })  
     }
 
@@ -77,6 +83,9 @@ class Main extends React.Component {
         })
         .then(() => {
           this.firstMount();
+        })
+        .catch(err => {
+          console.log(err)
         }) 
         e.target.reset();
     }
