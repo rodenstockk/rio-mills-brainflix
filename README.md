@@ -1,6 +1,24 @@
 # rio-mills-brainflix
 Full stack app using Node Express and React to build API and App
 
+Front-End Functionality;
+
+<ul>
+<li>Using the componet lifecycle componentDidMount - axios API request, and state - data is passed down as props to generate side videos, all main video content including comments</li>
+<li>3 routes exist for Home/On video page with comments, Video Upload Page, and Side vidoe list</li>
+<li>Clicking videos in "Next Video" displays Video Details - using componentDidUpdate lifecycle for the selected video to apply dynamic URL and displays all the information from stored back-end server(likes, view, author, description, comments, etc.)</li>
+<li>Event handler was used to POST videos in Upload page</li>
+</ul>  
+  
+Back-End Functionality;
+
+<ul>
+<li>The end-point and reponse structure of back-end server contains GET/video, GET/video/:id, POST/video</li>
+<li>Submitting a new video from the form (Upload Page) POSTs to the API</li>
+</ul>
+
+Demo screensht: 
+
 1. Brainflix is a web app that ables the user to go through videos and update comments
 ![1](https://user-images.githubusercontent.com/59574143/83926549-1f299180-a758-11ea-9d66-2385258942e3.png)
 
