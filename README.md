@@ -15,6 +15,7 @@ Back-End Functionality;
 <ul>
 <li>The end-point and reponse structure of back-end server contains GET/video, GET/video/:id, POST/video</li>
 <li>Submitting a new video from the form (Upload Page) POSTs to the API</li>
+<li>Submitting a comment from the displaying video detail page POSTs to the API</li>
 </ul>
 
 Demo screensht: 
