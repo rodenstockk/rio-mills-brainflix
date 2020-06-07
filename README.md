@@ -7,7 +7,7 @@ Front-End Functionality;
 <li>Using the componet lifecycle componentDidMount - axios API request, and state - data is passed down as props to generate side videos, all main video content including comments</li>
 <li>3 routes exist for Home/On video page with comments, Video Upload Page, and Side vidoe list</li>
 <li>Clicking videos in "Next Video" displays Video Details - using componentDidUpdate lifecycle for the selected video to apply dynamic URL and displays all the information from stored back-end server(likes, view, author, description, comments, etc.)</li>
-<li>Event handler was used to POST videos in Upload page</li>
+<li>Event handlers was used to POST videos in Upload page and POST new comments in main page for each videos</li>
 </ul>  
   
 Back-End Functionality;
